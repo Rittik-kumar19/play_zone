@@ -1,0 +1,304 @@
+
+body{
+    margin:0;
+    padding: 0;
+    background-image:repeating-conic-gradient(
+        from 45deg,
+        #111 0deg 90deg,
+         #222 90deg 180deg);
+    background-size: 4rem 4rem;
+}
+*{
+    box-sizing: border-box;
+}
+.ball{
+    background-color: white;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    animation-name: up-down;
+    animation-duration: 50s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    
+    float: left;
+}
+.ball2{
+    background-color: black;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    animation-name: up-down-2;
+    animation-duration: 50s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    
+    float: right;
+}
+@keyframes up-down{
+    100%{
+        margin-top: 0px;
+    }
+    75%{
+        margin-top: 84vmin;
+    }
+}
+@keyframes up-down-2{
+    100%{
+        margin-top: 0px;
+    }
+    50%{
+        margin-top: 84vmin;
+    }
+}
+.title_container{
+    height:70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 7.77vmin;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+
+@media(max-width:770px){
+    .game_selection_area{
+        display: flex;
+        flex-direction: column;
+        row-gap: 5vmin;
+    }
+    .score_area{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    
+    
+    
+}
+  
+.game_selection_area{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+  
+.game_selection_area>*{
+    height:31.2vmin;
+    width: 200px;
+    /****glassmorphism******/
+    background-image: linear-gradient(to right, rgba(177, 177, 184, 0.2), rgb(156, 159, 161));
+    font-size: 4.66vmin;
+    text-align: center;
+    
+}
+.game_selection_area>*:hover{
+    box-shadow: 0px 0px 5px 5px rgba(162, 179, 167, 0.5);
+}
+img {
+    width: 100%;
+    max-height: 70%;
+
+}
+
+
+.game_1{
+position: relative;
+top: 10rem;
+
+}
+.box_container{
+    height:calc( 100vh - ( 70px + 70px ) );
+    width: calc( 100vw - ( 14.6vmin ) );
+    background-color:grey;
+    position: absolute;
+    top:10.8vmin;
+    left:7.32vmin;
+
+}
+.fas{
+    font-size: 40px;
+    float:right
+}
+@media (max-width:770px){
+    .box_container{
+        height:85vmax;
+        width:78%;
+        overflow-y: hidden;
+    }
+    .game_2{
+        display: none;
+    }
+}
+
+
+
+.game_2{
+    position: relative;
+    top: 10rem;
+
+}
+.game_3{
+    position: relative;
+    top: 10rem;
+    
+}
+.main_area{
+    border: 2px solid black;
+    height: 73vmin;
+    display: flex;
+}
+
+.game_area_toe{
+    height: 100%;
+    
+    border-right:1px solid black;
+    width: 75%;
+    background-color: grey;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+@media (max-device-width:700px) {
+    #main{
+        height: 32vmax;
+        width: 70vmax;
+        margin:12vmin
+    }
+    
+    
+}
+
+
+
+#main>div{
+    height:17.22vmin;
+    width:9vmin;
+    font-size: 11vmin;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.game_area{
+    height: 100%;
+    border-right:1px solid black;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+}
+.score_area{
+    height: 100%;
+    width: 25%;
+    background-color: grey;
+    border: 1px solid black;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.score_area>*{
+    width:75px;
+    height:75px;
+    border: 1px solid ;
+
+}
+.your_score_area,.computer_score_area,.high_score{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.6vmin;
+    font-family:'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    height:10vmin;
+    width: 12vmin;
+}
+/****************tic tac toe setup********************/
+#div1,#div2,#div3,#div4,#div5,#div6,#div7,#div8,#div9{
+    border: 1px solid black;
+    height:100px;
+    width: 100px;
+    float:left;
+    font-size: 100px;
+    text-align: center;
+}
+#div1,#div4,#div7{
+    clear: left;
+    border-left: none;
+}
+#div3,#div6,#div9{
+    border-right: none;
+}
+#div1,#div2,#div3{
+    border-top: none;
+}
+#div7,#div8,#div9{
+    border-bottom: none;
+}
+
+/****************************************************/
+/********************for card game section creation*********/
+.game_area_card{
+    background-color: grey;
+}
+#memory_board{
+    text-align: center;
+    width: 100%;
+    height: 60.88vmin;
+    padding-top: 4.66vmin;
+    padding-left: 3.66vmin;
+    display: inline-block;
+}
+#memory_board>div{
+    background: lightgrey;
+    border:#000 2px solid;
+    border-radius: 0.5rem;
+    width:2.5%;
+    height: 2.5%;
+    
+    float: left;
+    margin: 1.4vmin;
+    padding: 6.8vmin;
+    font-size:6.22vmin;
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:1325px){
+    #memory_board{
+        overflow-x: hidden;
+        height:100%
+    }
+    .main_area{
+        height: 100%;
+    }
+}
+/***********snake game**********/
+.board{
+    background-color: gray;
+    width: 82vmin;
+    height: 70vmin;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+}
+.head{
+    background-color: black;
+}
+.food{
+    background-color: rgb(70, 66, 70);
+}
+.snake{
+    background-color: lightgrey;
+    border-radius: 50%;
+}
